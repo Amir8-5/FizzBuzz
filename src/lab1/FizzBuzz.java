@@ -33,13 +33,13 @@ class FizzBuzz {
 //            }
 //        }
 
-        int i = 0;
+        int i = 1;
         while (i < 100) {
             i = getI(i);
         }
     }
 
-    private static int getI(int i) {
+    public static int getI(int i) {
         boolean divBy3 = i % 3 == 0;
         boolean divBy5 = i % 5 == 0;
         if (divBy3 && divBy5) {
