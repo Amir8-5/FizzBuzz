@@ -31,4 +31,30 @@ public class Multiples {
         }
         return firstCount + secondCount;
     }
+
+    public static int multiples() {
+        int a = 3;
+        int b = 5;
+        int firstMultiple, secondMultiple;
+        firstMultiple = secondMultiple = 1;
+        int firstCount , secondCount ;
+        firstCount = secondCount = 0;
+        final int MAX = 1000;
+        HashSet<Integer> set = new HashSet<>();
+        while (a * firstMultiple < MAX || b * secondMultiple < MAX) {
+            if (a * firstMultiple < MAX && !set.contains(a * firstMultiple)){
+                firstCount++;
+                set.add(a * firstMultiple);
+            }
+
+            if (b * secondMultiple < MAX && !set.contains(b * secondMultiple)){
+                secondCount++;
+                set.add(b * secondMultiple);
+            }
+            firstMultiple++;
+            secondMultiple++;
+
+        }
+        return firstCount + secondCount;
+    }
 }
